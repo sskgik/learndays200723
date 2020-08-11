@@ -14,16 +14,19 @@ using System;
 public class Calc{
    public decimal Payment;
       
-
-      ///<summary>
-      ///入力された値を用いて計算を行うメソッド
-      ///</summary>
    
       public decimal principal ;       
       public decimal Intrate   ;       
       public decimal Payperyear;       
       public decimal NumYears  ; 
-      public decimal calc_regpay(){
+     
+      ///<summary>
+      ///入力された値を用いて計算を行うメソッド
+      ///</summary>
+      ///<return>
+      ///Payment(毎月の返済額)
+      ///</return>
+      public decimal Calcregpay(){
          
          decimal numer,denom;
          double b,e;
