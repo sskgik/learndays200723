@@ -15,10 +15,10 @@ public class Calc{
    public decimal Payment;
       
    
-      public decimal principal ;       
-      public decimal Intrate   ;       
+      public decimal principal;       
+      public decimal Intrate;       
       public decimal Payperyear;       
-      public decimal NumYears  ; 
+      public decimal NumYears; 
      
       ///<summary>
       ///入力された値を用いて計算を行うメソッド
