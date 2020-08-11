@@ -1,5 +1,5 @@
 ﻿/*
-金利計算と支払いのシュミレーションプログラム
+金利等お客さんの借入情報入力
 class.cs
 */
 
@@ -8,16 +8,10 @@ using System;
    /// <summary>
    /// お客様の借入情報に関するクラス
    /// </summary>
-   /// <param name="principal"   >元本</param>
-   /// <param name="Intrate"     >金利</param>
-   /// <param name="Payperyear"  >１年間の支払い回数</param>
-   /// <param name="Intrate"     >返済年数</param>
+
 
     public class Customer{ 
-      public decimal principal ;       
-      public decimal Intrate   ;       
-      public decimal Payperyear;       
-      public decimal NumYears  ;       
+         
       
       /// <summary>
       /// お客さんに入力された数字の例外判定
@@ -77,22 +71,23 @@ using System;
       /// <param name="Intrate_by_customer"       >お客様による金利の入力</param>
       /// <param name="NumYear_by_customer"       >お客様による元本の入力</param>
       public (decimal principal,decimal Intrate,decimal Payperyear,decimal NumYears) costomer_input(){   
-         
+         Calc input = new Calc();
          
          Console.WriteLine("借入金額を入力ください！！");
-         principal = nyuryoku_hantei();
+         input.principal = nyuryoku_hantei();
         
           
         Console.WriteLine("借入の金利(%)を入力ください！！");
-        Intrate = nyuryoku_hantei();
+        input.Intrate = nyuryoku_hantei();
+        input.Intrate = input.Intrate/100m;
 
          //返済回数は12回固定
-         Payperyear = 12.0m;                                     
+         input.Payperyear = 12.0m;                                     
        
         Console.WriteLine("何年で返済するか？を入力ください！！");
-        NumYears = nyuryoku_hantei(); 
+        input.NumYears = nyuryoku_hantei(); 
         
-        return (principal,Intrate,Payperyear,NumYears);
+        return (input.principal,input.Intrate,input.Payperyear,input.NumYears);
          
       }
     }
