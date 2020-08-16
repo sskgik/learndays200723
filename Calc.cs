@@ -7,10 +7,7 @@ using System;
 /// <summary>
 /// 計算用のクラス
 /// </summary>
-/// <param name="principal"   >元本</param>
-/// <param name="Intrate"     >金利</param>
-/// <param name="Payperyear"  >１年間の支払い回数</param>
-/// <param name="Intrate"     >返済年数</param> 
+
 public class Calc{
    public decimal Payment; 
      
