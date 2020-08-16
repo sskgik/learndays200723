@@ -12,13 +12,7 @@ using System;
 /// <param name="Payperyear"  >１年間の支払い回数</param>
 /// <param name="Intrate"     >返済年数</param> 
 public class Calc{
-   public decimal Payment;
-      
-   
-      public decimal principal ;       
-      public decimal Intrate   ;       
-      public decimal Payperyear;       
-      public decimal NumYears  ; 
+   public decimal Payment; 
      
       ///<summary>
       ///入力された値を用いて計算を行うメソッド
@@ -26,13 +20,10 @@ public class Calc{
       ///<return>
       ///Payment(毎月の返済額)
       ///</return>
-      public decimal Calcregpay(){
+      public decimal Calcregpay(decimal principal,decimal Intrate,decimal Payperyear,decimal NumYears){
          
          decimal numer,denom;
          double b,e;
-         
-
-
          //金額を計算するコード
          numer = Intrate * principal / Payperyear;
        

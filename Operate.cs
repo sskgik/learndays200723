@@ -10,19 +10,15 @@ class Operation{
       public static void Main(){
       
 
-      Customer Input   = new Customer();
+      Customer Costom   = new Customer();
       Calc Calculation = new Calc();
 
       //Tupleの呼び出し
-      (decimal principal,decimal Intrate,decimal Payperyear,decimal NumYears) = Input.costomer_input();
-      
-         Calculation.principal  = principal;
-         Calculation.Intrate    = Intrate;
-         Calculation.Payperyear = Payperyear;
-         Calculation.NumYears   = NumYears;
+      (decimal principal,decimal Intrate,decimal Payperyear,decimal NumYears) = Costom.Input();
+   
 
-      Calculation.Calcregpay();
-      
+      Calculation.Calcregpay(principal,Intrate,Payperyear,NumYears);
+
          if(Intrate >=0.0m & Intrate <=0.18m){      
 
             Console.WriteLine("お客様の毎月の返済額は{0:C}円です",Calculation.Payment);
